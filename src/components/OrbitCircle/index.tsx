@@ -9,12 +9,19 @@ import neptune from '../../assets/images/neptune.png'
 import uranus from '../../assets/images/uranus.png'
 import aiImage from '../../assets/images/ai-generated-concept-human.png'
 const OrbitCirlce = () => {
+
+    // Responsive radius values
+    // const isSmallScreen = window.innerWidth < 768;
+    // const smallRadius = 250;
+    // const largeRadius = 400;
+
+
     return (
-        <div className="relative flex w-full h-screen flex-col items-center justify-center mt-56">
+        <div className="relative flex w-full h-full overflow-hidden lg:overflow-visible flex-col items-center justify-center mt-56">
             {/* <img src={aiImage} alt="aiImage" className="w-5/12 z-20" /> */}
 
             <div
-                className="absolute h-30 w-[40%] bg-transparent z-10 bg-clip-border border-white"
+                className="absolute h-30 w-[90%] md:w-[40%] bg-transparent z-10 bg-clip-border border-white"
                 style={{
                     clipPath: `polygon(0% 25%, 100% 25%, 100% 65%, 0% 65%)`,
                     boxSizing: "border-box",
@@ -23,18 +30,14 @@ const OrbitCirlce = () => {
                 <img src={aiImage} alt="Blurred aiImage" className="w-full h-full object-cover" />
             </div>
 
-
             {/* Clear Centerpiece */}
-            <div className="absolute h-30 w-[40%]"
+            <div className="absolute h-30 w-[90%] md:w-[40%]"
                 style={{
                     filter: "blur(10px)",
                 }}
             >
                 <img src={aiImage} alt="Center aiImage" className="w-full h-full object-cover" />
             </div>
-
-
-
 
             <OrbitingCircles
                 className="size-[100px] border-none bg-transparent"
