@@ -11,15 +11,18 @@ import aiImage from '../../assets/images/ai-generated-concept-human.png'
 const OrbitCirlce = () => {
 
     // Responsive radius values
-    // const isSmallScreen = window.innerWidth < 768;
-    // const smallRadius = 250;
-    // const largeRadius = 400;
+    const isSmallScreen = window.innerWidth < 1025;
+    const smallRadius = 200;
+    const largeRadius = 400;
+
+    const smallLargeRadius = 400;
+    const largeLargeRadius = 650;
+
+
 
 
     return (
         <div className="relative flex w-full h-full overflow-hidden lg:overflow-visible flex-col items-center justify-center mt-56">
-            {/* <img src={aiImage} alt="aiImage" className="w-5/12 z-20" /> */}
-
             <div
                 className="absolute h-30 w-[90%] md:w-[40%] bg-transparent z-10 bg-clip-border border-white"
                 style={{
@@ -29,8 +32,6 @@ const OrbitCirlce = () => {
             >
                 <img src={aiImage} alt="Blurred aiImage" className="w-full h-full object-cover" />
             </div>
-
-            {/* Clear Centerpiece */}
             <div className="absolute h-30 w-[90%] md:w-[40%]"
                 style={{
                     filter: "blur(10px)",
@@ -43,7 +44,7 @@ const OrbitCirlce = () => {
                 className="size-[100px] border-none bg-transparent"
                 duration={40}
                 delay={10}
-                radius={400}
+                radius={isSmallScreen ? smallRadius : largeRadius}
                 path
             >
                 <img src={mercury} alt="mercury" />
@@ -54,7 +55,7 @@ const OrbitCirlce = () => {
                 className="size-[100px] border-none bg-transparent"
                 duration={40}
                 delay={20}
-                radius={400}
+                radius={isSmallScreen ? smallRadius : largeRadius}
                 path
             >
                 <img src={venus} alt="venus" />
@@ -65,7 +66,7 @@ const OrbitCirlce = () => {
                 className="size-[100px] border-none bg-transparent"
                 duration={40}
                 delay={30}
-                radius={400}
+                radius={isSmallScreen ? smallRadius : largeRadius}
                 path
             >
                 <img src={earth} alt="earth" />
@@ -76,7 +77,7 @@ const OrbitCirlce = () => {
                 className="size-[100px] border-none bg-transparent"
                 duration={40}
                 delay={40}
-                radius={400}
+                radius={isSmallScreen ? smallRadius : largeRadius}
                 path
             >
                 <img src={mars} alt="mars" />
@@ -88,7 +89,7 @@ const OrbitCirlce = () => {
                 className="size-[100px] border-none bg-transparent"
                 duration={40}
                 delay={10}
-                radius={650}
+                radius={isSmallScreen ? smallLargeRadius : largeLargeRadius}
                 reverse
                 path
             >
@@ -100,7 +101,7 @@ const OrbitCirlce = () => {
                 className="size-[200px] border-none bg-transparent"
                 duration={40}
                 delay={30}
-                radius={650}
+                radius={isSmallScreen ? smallLargeRadius : largeLargeRadius}
                 reverse
                 path
             >
@@ -112,7 +113,7 @@ const OrbitCirlce = () => {
                 className="size-[100px] border-none bg-transparent"
                 duration={40}
                 delay={40}
-                radius={650}
+                radius={isSmallScreen ? smallLargeRadius : largeLargeRadius}
                 reverse
                 path
             >
@@ -125,7 +126,7 @@ const OrbitCirlce = () => {
                 className="size-[200px] border-none bg-transparent"
                 duration={40}
                 delay={60}
-                radius={650}
+                radius={isSmallScreen ? smallLargeRadius : largeLargeRadius}
                 reverse
                 path
             >
