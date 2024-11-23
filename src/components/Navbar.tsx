@@ -1,3 +1,4 @@
+import logo from '../assets/images/logo.png'
 
 const Navbar = () => {
     return (
@@ -5,7 +6,9 @@ const Navbar = () => {
             <div className="container mx-auto flex items-center justify-between px-4 py-3">
                 {/* Section 1: Logo */}
                 <div className="text-xl font-bold text-white">
-                    <a href="#">MyLogo</a>
+                    <a href="#">
+                        <img src={logo} alt="logo" />
+                    </a>
                 </div>
 
                 {/* Section 2: Navigation Links */}
