@@ -15,7 +15,7 @@ const OrbitCirlce = () => {
     const smallRadius = 200;
     const largeRadius = 400;
 
-    const smallLargeRadius = 400;
+    const smallLargeRadius = 350;
     const largeLargeRadius = 650;
 
 
